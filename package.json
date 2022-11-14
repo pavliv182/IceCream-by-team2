@@ -1,16 +1,16 @@
 {
-  "name": "parcel-project-template",
+  "name": "icecream-by-team2",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://MaximKucheriaviy.github.io/IceCream-by-team2",
+  "homepage": "https://pavliv182.github.io/IceCream-by-team2",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /IceCream-by-team2/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/pavliv182/icecream-by-team2.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
