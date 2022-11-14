@@ -1,0 +1,92 @@
+<!-- В этом файле работает Дима Гончаров -->
+<section class="herro">
+  <div class="herro__container container">
+    <div class="title-container">
+      <h1 class="herro__title">
+        ice cream made with
+        <span class="herro__text">passion</span>
+      </h1>
+      <div class="herro-btn">
+        <a class="herro__first-link" href="#production-section">Products</a>
+        <a class="herro__second-link" href="#how-its-made">How it’s made?</a>
+      </div>
+      <picture class="herro__milk">
+        <source
+          srcset="
+            /images/herro-img/herro-image-3_lg@1x.png 1x,
+            /images/herro-img/herro-image-3_lg@2x.png 2x
+          "
+          media="(min-width:1280px)"
+          type="image/jpeg"
+        />
+        <source
+          srcset="/images/herro-img/herro-image-3_md@2x.png 2x"
+          media="(min-width:768px)"
+          type="image/jpeg"
+        />
+        <img src="/images/herro-img/herro-image-3_md@1x.png" alt="ice-cream" />
+      </picture>
+    </div>
+
+    <picture class="herro__img">
+      <source
+        srcset="
+          /images/herro-img/herro-image-1_lg@1x.png 1x,
+          /images/herro-img/herro-image-1_lg@2x.png 2x
+        "
+        media="(min-width:1280px)"
+        type="image/jpeg"
+      />
+      <source
+        srcset="
+          /images/herro-img/herro-image-1_md@1x.png 1x,
+          /images/herro-img/herro-image-1_md@2x.png 2x
+        "
+        media="(min-width:768px)"
+        type="image/jpeg"
+      />
+      <source
+        srcset="/images/herro-img/herro-image-1_sm@2x.png 2x"
+        media="(max-width:767px)"
+        type="image/jpeg"
+      />
+      <img src="/images/herro-img/herro-image-1_sm@1x.png" alt="ice-cream" />
+    </picture>
+    <div class="ice-cream__background"></div>
+
+    <div class="herro__milk-container">
+      <p class="herro__milk-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et
+      </p>
+      <button class="herro__milk-button" type="button">
+        <svg width="10" height="10">
+          <use href="./images/icons.svg#icon-arrow2"></use>
+        </svg>
+      </button>
+    </div>
+    <picture class="herro__woman">
+      <source
+        srcset="
+          /images/herro-img/herro-image-2_lg@1x.png 1x,
+          /images/herro-img/herro-image-2_lg@2x.png 2x
+        "
+        media="(min-width:1280px)"
+        type="image/jpeg"
+      />
+      <source
+        srcset="/images/herro-img/herro-image-2_md@2x.png 2x"
+        media="(min-width:768px)"
+        type="image/jpeg"
+      />
+      <img src="/images/herro-img/herro-image-2_md@1x.png" alt="ice-cream" />
+    </picture>
+
+    <div class="cafes__container">
+      <span class="cafes__number">16 </span>
+      <p class="cafes">cafes</p>
+      <span class="cafes__number">23 </span>
+      <p class="cafes">food trucks</p>
+    </div>
+  </div>
+</section>

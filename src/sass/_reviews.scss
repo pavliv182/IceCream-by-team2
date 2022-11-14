@@ -1,0 +1,215 @@
+// В этом файле работает Алексей
+.reviews {
+    padding-bottom: 48px;
+    @include mq(tablet) {
+        padding-bottom: 80px;
+    }
+    @include mq(desktop) {
+        padding-bottom: 120px;
+    }
+}
+.reviews__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    @media screen and (min-width: 768px) {
+        padding-top: 121px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    z-index: 1;
+}
+
+.reviews__photo {
+    width: 85px;
+    height: 85px;
+}
+.reviews__img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reviews__block {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 100%;
+    height: 308px;
+    background-color: #fafafa;
+    margin-top: 29px;
+    align-items: center;
+    justify-content: center;
+
+
+    @include mq(mobile-only) {
+        width: 280px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-top: 20px;
+        width: 620px;
+        height: 164px;
+        padding-top: 47px;
+        padding-bottom: 34px;
+    
+    }
+
+    @include mq(desktop) {
+        width: 1034px;
+        height: 138px;
+        padding-top: 47px;
+        padding-bottom: 39px;
+    }
+}
+
+.reviews__block::before {
+    position: absolute;
+    content: url(../images/comas.svg);
+    z-index: 2;
+
+    @include mq(mobile-only) {
+        top: 15px;
+        left: 53px;
+        width: 54px;
+        height: 40px;
+    }
+
+    @include mq(tablet) {
+        top: 32px;
+        left: 15px;
+        width: 60px;
+        height: 40px;
+    }
+
+    @include mq(desktop) {
+        top: 27px;
+        left: 105px;
+        width: 54px;
+        height: 40px;
+    }
+
+}
+
+.reviews__underline-block {
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    background-image:
+        repeating-linear-gradient(transparent 0px, transparent 30px, #E1E1E1 30px, #E1E1E1 31px);
+
+        @include mq(mobile){
+            width: 180px;
+            height: 248px;
+        }
+
+    @include mq(tablet) {
+        width: 608px;
+        height: 93px;
+
+    }
+
+    @include mq(desktop) {
+        width: 821px;
+        height: 72px;
+        background-image: repeating-linear-gradient(transparent 0px, transparent 35px, #E1E1E1 35px, #E1E1E1 36px);
+    }
+}
+
+.reviews__text::before{
+    display: flex;
+    content: url(../images/dots.svg);
+    justify-content: center;
+}
+
+.reviews__block-text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2.58;
+    text-align: center;
+    width: 157px;
+    height: 248px;
+    z-index: 3;
+
+    @include mq(tablet-only) {
+        width: 514px;
+        height: 83px;
+        font-size: 14px;
+        line-height: 2.14;
+        letter-spacing: 0.04em;
+    }
+
+    @include mq(desktop) {
+        width: 750px;
+        height: 52px;
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.04em;
+    }
+}
+
+.reviews__text {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.86;
+    margin-top: 40px;
+}
+
+.slick-dots {
+    //margin-bottom: 40px;
+
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+
+    display: inline-block;
+    margin: auto;
+    border-radius: 50%;
+
+    width: 12px;
+    height: 12px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    //background: transparent;
+}
+
+.slick-dots li.slick-active {
+    width: 12px;
+    height: 12px;
+    top: 4px;
+    background-image: url(../../src\images\Frame.svg);
+}
+
+.slick-dots li.slick-active button {
+    background: transparent;
+    z-index: -1;
+}

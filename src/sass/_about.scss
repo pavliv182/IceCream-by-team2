@@ -1,0 +1,254 @@
+// В этом файле работает Паша
+
+// BACKGROUND-IMG
+
+.background-img-container {
+  @include mq(desktop) {
+    display: block;
+    margin: 0 auto;
+    max-width: 1280px;
+
+    background-image: url(../images/about/img/about-bg-img_lg.png);
+    background-position: 0 195px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    @include mq(retina) {
+      background-image: url(../images/about/img/about-bg-img_lg@2x.png);
+    }
+  }
+}
+
+// ABOUT SECTION
+
+.about {
+  padding-top: 5px;
+
+  background-color: #fff5f6;
+  background-position: 0 574px;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @include mq(mobile-only) {
+    background-image: url(/images/about/img/about-bg-img_sm.png);
+
+    @include mq(retina) {
+      background-image: url(/images/about/img/about-bg-img_sm@2x.png);
+    }
+  }
+
+  @include mq(tablet) {
+    padding-top: 20px;
+  }
+  @include mq(desktop) {
+    padding-top: 60px;
+  }
+
+  &__subtitle {
+    margin-bottom: 15px;
+
+    font-family: 'Titan One';
+    font-style: normal;
+
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $secondaryColor;
+
+    @include mq(tablet) {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @include mq(desktop) {
+      font-size: 30px;
+      line-height: 1.13;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-size: 34px;
+    line-height: 1.14;
+
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $accentColor;
+
+    @include mq(mobile-only) {
+      width: 200px;
+    }
+
+    @include mq(tablet) {
+      margin-bottom: 40px;
+
+      font-size: 48px;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 60px;
+
+      font-size: 58px;
+      line-height: 1.13;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  // ABOUT CONTAINER
+
+  &__container {
+    display: flex;
+
+    @include mq(mobile-only) {
+      display: block;
+    }
+
+    @include mq(tablet-only) {
+      justify-content: space-between;
+    }
+
+    @include mq(notDesktop) {
+      align-items: center;
+    }
+  }
+
+  // ABOUT IMG
+
+  &__img {
+    width: 100%;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include mq(mobile-only) {
+      margin-bottom: 40px;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// ABOUT DESCR
+
+.about__descr {
+  &-container {
+    width: 220px;
+
+    @include mq(tablet) {
+      width: 334px;
+    }
+
+    @include mq(desktop) {
+      margin-left: 140px;
+      width: 463px;
+    }
+  }
+
+  &-title {
+    margin-bottom: 25px; // среднее значение ввиду дурацкого макета
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+
+    color: $fontBlack;
+
+    @include mq(tablet) {
+      font-size: 14px;
+      line-height: 1.76;
+    }
+
+    @include mq(desktop) {
+      margin-top: 91px;
+      margin-bottom: 32px;
+
+      font-size: 16px;
+      line-height: 1.76;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &-text {
+    margin-bottom: 20px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+
+    color: $fontGray;
+
+    @include mq(tablet) {
+      margin-bottom: 40px;
+
+      font-size: 14px;
+      line-height: 1.76;
+      letter-spacing: 0.04em;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 40px;
+
+      font-size: 14px;
+      line-height: 1.94;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  &-text-part {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+// IS HIDDEN
+
+.is-hidden {
+  display: none;
+}
+
+// ABOUT BUTTON
+
+.about-btn {
+  min-width: 176px;
+  height: 44px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $accentColor;
+  background-color: $fontWhite;
+
+  border-radius: 22px;
+  border-color: transparent;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
+  }
+
+  &__text {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &__arrow {
+    stroke: $accentColor;
+  }
+}

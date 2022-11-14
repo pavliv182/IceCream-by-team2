@@ -1,0 +1,296 @@
+// В этом файле работает Дима Гончаров
+html {
+  scroll-behavior: smooth;
+}
+.herro {
+  width: 100%;
+
+  background-color: rgb(255, 184, 202);
+  overflow: hidden;
+}
+.herro__container {
+  position: relative;
+}
+.title-container {
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+  padding-top: 194px;
+  padding-bottom: 158px;
+
+  @include mq(tablet) {
+    padding-top: 102px;
+    padding-bottom: 16px;
+  }
+  @include mq(desktop) {
+    padding-top: 147px;
+    padding-bottom: 60px;
+  }
+}
+.herro__title {
+  width: 218px;
+  font-family: Titan One;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+  text-align: left;
+  letter-spacing: 0.04em;
+  color: $fontWhite;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @include mq(tablet) {
+    width: 162px;
+    font-size: 22px;
+  }
+  @include mq(desktop) {
+    width: 277px;
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+}
+.herro__text {
+  font-family: Titan One;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 0.96;
+  text-align: left;
+  color: $accentColor;
+
+  @include mq(tablet) {
+    font-size: 34px;
+  }
+  @include mq(desktop) {
+    font-size: 58px;
+  }
+}
+.herro__first-link {
+  display: inline-block;
+  padding: 7px 14px;
+  color: #fff;
+  background-color: $accentColor;
+  border: none;
+  border-radius: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: center;
+  transition: background-color 250ms ease-in;
+
+  @include mq(desktop) {
+    padding: 11px 24px;
+    font-size: 14px;
+    &:hover,
+    &:focus {
+      background-color: rgba(199, 19, 62, 1);
+    }
+  }
+}
+.herro__second-link {
+  display: inline-block;
+  padding: 7px 14px;
+  color: $accentColor;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-family: 'DM Sans';
+  font-weight: normal;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: center;
+  margin-left: 8px;
+  transition: background-color 250ms ease-in;
+
+  @include mq(desktop) {
+    padding: 11px 24px;
+    font-size: 14px;
+    margin-left: 12px;
+    &:hover,
+    &:focus {
+      background-color: rgba(236, 235, 235, 1);
+    }
+  }
+}
+.herro__milk {
+  display: none;
+
+  @include mq(tablet) {
+    display: block;
+    margin-top: 20px;
+  }
+  @include mq(desktop) {
+    margin-top: 40px;
+  }
+}
+.herro__milk-container {
+  display: none;
+
+  @include mq(tablet) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 184px;
+    bottom: 56px;
+    z-index: 3;
+  }
+  @include mq(desktop) {
+    left: 229px;
+    bottom: 84px;
+  }
+}
+.herro__milk-text {
+  width: 114px;
+  height: 48px;
+  font-family: 'DM Sans';
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 7px;
+  @include mq(desktop) {
+    width: 200px;
+    height: 78px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+.herro__milk-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+  fill: $accentColor;
+  transition: transform 250ms ease-in;
+
+  @include mq(desktop) {
+    width: 26px;
+    height: 26px;
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+  }
+}
+.herro__img {
+  display: inline-block;
+  position: absolute;
+  top: 92px;
+  right: 32px;
+  z-index: 2;
+  @include mq(tablet) {
+    right: 303px;
+    top: 92px;
+  }
+  @include mq(desktop) {
+    right: 408px;
+    top: 115px;
+  }
+}
+.ice-cream__background {
+  position: absolute;
+  display: inline-block;
+  top: 83px;
+  right: -62px;
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: rgba(255, 165, 186, 1);
+  z-index: 1;
+
+  @include mq(tablet) {
+    width: 335px;
+    height: 333px;
+    right: 185px;
+    top: 43px;
+  }
+  @include mq(desktop) {
+    width: 534px;
+    height: 534px;
+    right: 229px;
+    top: 54px;
+  }
+}
+
+.herro__woman {
+  display: none;
+
+  @include mq(tablet) {
+    display: block;
+    position: absolute;
+    right: 32px;
+    bottom: 0px;
+    z-index: 3;
+  }
+  @include mq(desktop) {
+    right: 16px;
+  }
+}
+
+.cafes__container {
+  display: none;
+  @include mq(tablet) {
+    position: absolute;
+    z-index: 5;
+    top: 94px;
+    right: 42px;
+    display: flex;
+    flex-direction: column;
+  }
+  @include mq(desktop) {
+    top: 157px;
+    right: 34px;
+  }
+}
+.cafes__number {
+  font-family: Titan One;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: right;
+  letter-spacing: 0.04em;
+  color: $accentColor;
+  &::before {
+    display: inline-block;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    transform: translate(250%, -85%);
+    position: relative;
+    z-index: -1;
+    @include mq(desktop) {
+      width: 32px;
+      height: 32px;
+      transform: translate(230%, -65%);
+    }
+  }
+
+  @include mq(desktop) {
+    font-size: 46px;
+  }
+}
+.cafes {
+  font-family: 'DM Sans';
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 10px;
+  text-align: right;
+  color: $fontWhite;
+  margin-top: 2px;
+  margin-bottom: 18px;
+  @include mq(desktop) {
+    margin-bottom: 25px;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

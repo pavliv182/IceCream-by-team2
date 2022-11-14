@@ -1,0 +1,67 @@
+<!-- В этом файле работает Юра -->
+<header class="header">
+    <div class="container">
+        <div class="header_nav">
+            <a class="header__link " href="./index.html">
+                <img class="business__img" src=" ./images/logo/logo@1x.png" alt="логотип ice cream" width="199" height="50" />
+            </a>
+             <nav class="nav">
+                 <ul class="nav_list" id="menu">
+                     <li class="nav-item"><a class="nav_link">Home</a></li>
+                     <li class="nav-item"><a class="nav_link" href="#production-section">About us</a></li>
+                     <li class="nav-item"><a class="nav_link" href="#how-its-made">How it’s made?</a></li>
+                     <li class="nav-item"><a class="nav_link" href="#production-count">Our products</a></li>
+                     <li class="nav-item"><a class="nav_link" href="#contacts-section">Contact</a></li>
+                 </ul>
+             </nav>
+            <div class="header-button">
+                <button class="js-open-modal menu-btn-open" data-modal="1">
+                    <svg class="mobile__button-icon " width="20" height="12">
+                        <use class="mobile_buttom-open" href=" /images/icons.svg#icon-burher"></use>
+                    </svg>
+                </button>
+                <button class="mobile__button-nav" type="button"><span class="mobile__text">Buy now</span>
+                    <svg width="8">
+                        <use class="mobile_buttom-close" href=" /images/icons.svg#icon-arrow1"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- модалка -->
+<div class="modal header-modal" data-modal="1">
+    <nav class="modal-overlay">
+
+        <button class="modal__cross js-modal-close">
+            <svg class="mobile__button-icon" width="14" height="14">
+                <use class="mobile_buttom-close" href=" /images/icons.svg#icon-crost"></use>
+            </svg>
+        </button>
+
+        <button class="mobile__button" type="button"><span class="mobile__text">Buy now</span>
+            <svg width="8" >
+                <use class="mobile_buttom-close" href=" /images/icons.svg#icon-arrow1"></use>
+            </svg>
+        </button>
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item">
+                <a href="./index.html" class="mobile-nav__link js-modal-close">Home</a>
+            </li>
+            <li class="mobile-nav__item ">
+                <a class="mobile-nav__link js-modal-close" href="#production-section">About us</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="mobile-nav__link js-modal-close" href="#how-its-made">How it’s made?</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="mobile-nav__link js-modal-close" href="#production-count">Our products</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a class="mobile-nav__link js-modal-close" href="#contacts-section">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+</div>

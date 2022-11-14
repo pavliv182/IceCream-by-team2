@@ -1,0 +1,115 @@
+// В этом файле работает Таня
+.statistics{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    background-color: #FFF5F6;
+
+
+    // Последние правки
+
+    @include mq(mobile-only) {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    
+        @include mq(tablet-only) {
+            padding-top: 80px;
+        }
+    
+        @include mq(desktop) {
+            padding-top: 60px;
+        }
+    }
+
+.statistics__list{
+    @media screen and (min-width:768px){
+        display: flex;
+    }
+}
+
+.statistics__item{
+    max-width: 270px;
+
+    @media screen and (min-width:768px) {
+        width: 162px;
+        margin-right: 22px;
+    }
+
+    @media screen and (min-width:1280px) {
+        width: 288px;
+        margin-right: 142px;
+    }
+}
+
+.statistics__item:last-child{
+    @media screen and (min-width:768px){
+        margin-right: 0;
+    }
+}
+
+.statistics__item-milk::before{
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    padding-top: 40px;
+    content: url(../images/production-count/milk.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    @include mq(tablet) {
+            padding-top: 0;
+        }
+}
+
+.statistics__item-yogurt::before {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    padding-top: 32px;
+    content: url(../images/production-count/yogurt.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    @include mq(tablet){
+        padding-top: 0;
+    }
+}
+
+.statistics__item-lolly::before{
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+    padding-top: 32px;
+    content: url(../images/production-count/lolly.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+
+    @include mq(tablet) {
+            padding-top: 0;
+        }
+}
+
+.statistics__title{
+    margin-bottom: 25px;
+
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $accentColor;
+}
+
+.statistics__text{
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    color: $fontBlack;
+}
+
+.statistics__text:last-child{
+    margin-bottom: 0;
+}

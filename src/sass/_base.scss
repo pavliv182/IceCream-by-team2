@@ -1,0 +1,156 @@
+// В этот файл ничего не пишем!!! Пользуемся visuali-hidden
+
+// Это шрифты с их семействами
+//     font-family: 'DM Sans', sans-serif; => установлен на body
+//     font-family: 'Titan One', cursive;
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+
+  // наиболее используемый шрифт
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin: 0px auto;
+
+  min-width: 280px;
+  max-width: 480px;
+
+  @include mq(tablet) {
+    max-width: none;
+    width: 768px;
+  }
+  @include mq(desktop) {
+    max-width: none;
+    width: 1280px;
+  }
+
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+/* Стили для модальных окон */
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+
+  /*  Установаем ширину окна  */
+  width: 100%;
+  max-width: 500px;
+
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+.pin-back{
+  position: absolute;
+  background-image: linear-gradient(to bottom, #FFF5F6, #FFFFFF);
+  width: 100%;
+  height: 1513px;
+  left: 0px;
+  bottom: 0px;
+
+  @media screen and (min-width: 768px){
+    height: 787px;
+  }
+  @media screen and (min-width: 1280px){
+    height: 877px;
+  }
+}
+.footer-contacts{
+  position: relative;
+}
+
+// #FFB8CA
+// #FFF5F6

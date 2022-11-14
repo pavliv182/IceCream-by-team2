@@ -1,0 +1,136 @@
+
+.header-modal{
+    padding-left: 0px;
+    padding-right: 0;
+    max-width: none;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+    text-align: center;
+    background-color: #E17992;
+
+    @media screen and(min-width: 768px){
+        width: 254px;
+        
+        top: 0px;
+        transform: translateX(-50%) translateY(0%);
+    }
+}
+
+.modal.active,
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-btn.is-active .mobile_buttom-open {
+    opacity: 1;
+}
+
+
+
+.mobile-nav__link{  
+    &:hover,
+    &:focus{
+        color:$accentColor;
+    }
+}
+
+
+.mobile__button{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 32px;
+    width: 209px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: #FFFFFF;
+    border: none;
+    
+    
+    & svg{
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        margin-left: 16px;
+        stroke: $accentColor;
+
+
+        & use{
+            display: block;
+        }
+    }
+
+        @include mq(tablet) {
+            width: 186px;
+            height: 44px;
+            margin-top: 58px;
+            margin-bottom: 34px;
+    
+        }
+
+
+
+
+}
+
+.mobile__text{
+    font-family: 'DM Sans';
+       
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;    
+        color: #D41443;
+}
+
+
+.mobile-nav__link {
+
+
+    font-family: 'DM Sans';
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.2px;
+        align-items: center;
+        text-decoration: none;
+    
+        color: #FFFFFF;
+
+    // &:hover {
+    //     color: #2196f3;
+    //     ;
+
+    // }
+
+
+    // &:focus {
+    //     color: #2196f3;
+    // }  
+}
+
+.mobile-nav__list{
+    text-align: left;
+}
+
+.mobile-nav__item{
+    padding-top: 13px;
+    padding-bottom: 11px;
+    padding-left: 20px;
+    border-top: 1px solid #E18298;
+
+    &:last-child{
+        border-bottom: 1px solid #E18298;
+    }
+}
+
+
+
+

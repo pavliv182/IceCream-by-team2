@@ -1,0 +1,59 @@
+<!-- В этом файле работает Паша -->
+<section class="about" id="how-its-made">
+  <div class="background-img-container">
+    <div class="container about-container">
+      <p class="about__subtitle">tradition and love</p>
+      <h2 class="about__title">how it's made?</h2>
+      <div class="about__container">
+        <picture
+          ><source
+            srcset="
+              ./images/about/img/about-img_lg.png    1x,
+              ./images/about/img/about-img_lg@2x.png 2x
+            "
+            media="(min-width: 1280px)"
+            type="image/png" />
+          <source
+            srcset="
+              ./images/about/img/about-img_md.png    1x,
+              ./images/about/img/about-img_md@2x.png 2x
+            "
+            media="(min-width: 480px)"
+            type="image/png" />
+          <source
+            srcset="
+              ./images/about/img/about-img_sm.png    1x,
+              ./images/about/img/about-img_sm@2x.png 2x
+            "
+            media="(max-width: 479px)"
+            type="image/png" />
+          <img class="about__img" src="./images/about/img/about-img_sm.png" alt="natural milk"
+        /></picture>
+        <div class="about__descr-container">
+          <p class="about__descr-title">
+            Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
+            lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+          </p>
+
+          <p class="about__descr-text">
+            Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus
+            orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat
+            urna maximus. Cras massa nibh, tincidunt.
+            <span class="about__descr-text-part">Aliquam erat volutpat. Aenean accumsan.</span>
+          </p>
+          <p class="about__descr-text is-hidden js-read-more">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde placeat, quis a voluptate
+            facere ad molestias sit nulla vel veniam, magni omnis maiores autem totam sunt numquam
+            nemo consequatur tempora!
+          </p>
+          <button class="about-btn js-read-btn" type="button">
+            <span class="about-btn__text js-btn-text">Read more</span>
+            <svg class="about-btn__arrow" width="6.5px" height="10px">
+              <use href="./images/icons.svg#icon-arrow1"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

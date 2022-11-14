@@ -1,0 +1,136 @@
+.header{
+    position: absolute;
+
+    display: block;
+    padding-top: 8px;
+    width: 100%;
+
+    @include mq(tablet) {
+        padding-top: 32px;
+    }
+    & .container{
+        max-width: none;
+        @include mq(tablet) {
+            width: 100%;
+        }
+        @include mq(desktop) {
+            width: 1280px;
+        }
+    }
+}
+
+.header-button{
+    display: flex;
+    align-items: center;
+}
+
+.header__link{
+    display: inline-block;
+    // padding-top: 8px;
+
+    @include mq(tablet) {
+        padding: 0;            
+    }    
+}
+
+.header_nav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    // margin-left: 32px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav_list{
+    display: none;
+
+    @include mq(desktop) {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        margin-left: -35px;
+        margin-top: -52px;
+
+
+    }
+    
+
+}
+
+.nav-item{
+    margin-left: 35px;
+    margin-top: 52px;
+    z-index: 99;
+    
+}
+
+.nav_link{
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover,
+    &:focus {
+    color: $accentColor;
+    }
+
+}
+
+
+.mobile__button-nav{
+    display: none;
+    
+    @include mq(tablet) {
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        
+        
+        width: 160px;
+        height: 44px;
+        border-radius: 22px;
+        background-color: #FFFFFF;
+        border: none;
+        margin-left: 32px;
+        
+        
+        & svg {
+            display: flex;
+        
+            justify-content: center;
+            align-items: center;
+            margin-left: 16px;
+            stroke: $accentColor;
+        
+        
+            & use {
+                display: block;
+            }
+        }
+    }
+
+         @include mq(desktop) {
+            width: 159px;
+           
+            
+            
+            
+    
+    
+         }
+
+
+
+
+}    
+
+
+
